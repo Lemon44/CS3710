@@ -42477,3 +42477,48 @@ Processing by CarsController#new as HTML
 Completed 200 OK in 1804ms (Views: 1604.4ms | ActiveRecord: 20.9ms)
 
 
+Started GET "/cars" for ::1 at 2019-11-19 16:43:26 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:22
+  Rendered cars/index.html.erb within layouts/application (38.3ms)
+Started GET "/cars" for ::1 at 2019-11-19 16:43:28 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:22
+  Rendered cars/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 3597ms (Views: 3239.8ms | ActiveRecord: 8.4ms)
+
+
+Completed 200 OK in 2087ms (Views: 2058.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cars/new" for ::1 at 2019-11-19 16:43:33 -0700
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mMake Load (1.4ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:16
+  [1m[36mCACHE Make Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:21
+  [1m[36mPart Load (1.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/cars/_form.html.erb:32
+  Rendered cars/_form.html.erb (1330.7ms)
+  Rendered cars/new.html.erb within layouts/application (1400.5ms)
+Completed 200 OK in 1753ms (Views: 1643.3ms | ActiveRecord: 16.7ms)
+
+
+Started POST "/cars" for ::1 at 2019-11-19 16:43:41 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IAJ5Tvsk7cu9WGUoq5hHtLEvQTUTI4/H5sWDFyBpScNIthOSN+AgyE+WasUSqtCK5k4ONEeSI4seR2wkDhGbpA==", "car"=>{"make_id"=>"2", "vin"=>"77777777777777777", "part_ids"=>"1"}, "commit"=>"Create Car"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98

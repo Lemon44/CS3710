@@ -1,0 +1,33 @@
+C:\Users\nicol\OneDrive\Documents\GitHub\assignment-one-Lemon44>git  log
+commit 1b20bfb60a4554b956c4f46402321c4135c72ad7 (HEAD -> master, origin/master)
+Merge: 1871e59 2bb5386
+Author: Lemon44 <nbeck4@msudenver.edu>
+Date:   Sun Sep 22 18:10:38 2019 -0600
+
+    Merge branch 'master' of https://github.com/msu-denver-cs/assignment-one-Lemon44
+
+commit 1871e597a916c36e137cf293cef422b2cefbb54a
+Author: Lemon44 <nbeck4@msudenver.edu>
+Date:   Sun Sep 22 18:10:00 2019 -0600
+
+    all changes
+
+commit 2bb5386be552886125691cf2ee6b011bd4a998a7
+Author: Lemon44 <nbeck4@msudenver.edu>
+Date:   Sun Sep 22 18:07:26 2019 -0600
+
+    Explanation of Program details in the ReadMe
+
+commit d1c3a9a71556052a51b368a77e44f3ee49bcf016
+Author: Lemon44 <nbeck4@msudenver.edu>
+Date:   Sun Sep 22 10:39:35 2019 -0600
+
+    Add files to github unlinked folder
+
+    Can't seem to figure out how my repository wasn't linked to this exact github account so lost some commits in the process
+
+commit cd9c3ce54c7fc95030c54ed6505722d6ce2df18a
+Author: Lemon44 <51206895+Lemon44@users.noreply.github.com>
+Date:   Thu Sep 12 12:41:23 2019 -0600
+
+    first commit
