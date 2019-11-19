@@ -42522,3 +42522,22 @@ Processing by CarsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"IAJ5Tvsk7cu9WGUoq5hHtLEvQTUTI4/H5sWDFyBpScNIthOSN+AgyE+WasUSqtCK5k4ONEeSI4seR2wkDhGbpA==", "car"=>{"make_id"=>"2", "vin"=>"77777777777777777", "part_ids"=>"1"}, "commit"=>"Create Car"}
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
   ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :make_id, :part_ids
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cars_controller.rb:40
+  [1m[36mCar Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."vin" = ? LIMIT ?[0m  [["vin", 77777777777777777], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:40
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cars_controller.rb:40
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mMake Load (0.8ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:16
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:21
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/cars/_form.html.erb:32
+  Rendered cars/_form.html.erb (42.7ms)
+  Rendered cars/new.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 530ms (Views: 385.6ms | ActiveRecord: 3.7ms)
+
+
