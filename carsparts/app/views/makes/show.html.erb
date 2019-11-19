@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @make.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @make.model %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @make.country %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @make.year %>
+</p>
+
+<%= link_to 'Edit', edit_make_path(@make) %> |
+<%= link_to 'Back', makes_path %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @car.make.name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @car.make.country %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.make.model %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @car.vin %>
+</p>
+
+<p>
+  <strong>Part:</strong>
+  <% @car.parts.each do |part| %>
+    <li><%= part.name %></li>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %> |
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
