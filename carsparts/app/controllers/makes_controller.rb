@@ -4,17 +4,19 @@ class MakesController < ApplicationController
   # GET /makes
   # GET /makes.json
   def index
-    @makes = Make.all
+    @make = Make.all
   end
 
   # GET /makes/1
   # GET /makes/1.json
   def show
+    @make = Make.all
   end
 
   # GET /makes/new
   def new
     @make = Make.new
+   # @cars = Car.all
   end
 
   # GET /makes/1/edit
@@ -69,6 +71,6 @@ class MakesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def make_params
-      params.require(:make).permit(:name, :country, :model, :year)
+      params.require(:make).permit(:id, :name, :country, :model, :year)
     end
 end

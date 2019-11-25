@@ -3,7 +3,7 @@
 
 <h1>Cars</h1>
 
-<h2>Search Cars by Vin:</h2>
+<h2 style="color:white;">Search Cars by Vin:</h2>
 <%= form_tag(search_cars_url, method: "get") do %>
     <%= label_tag(:search, "Search for:") %>
     <%= text_field_tag(:search) %>
@@ -14,7 +14,7 @@
 <table>
   <thead>
     <tr>
-      <th>Vin</th>
+      <th style="color:white;">Vin</th>
       <th colspan="6"></th>
     </tr>
   </thead>

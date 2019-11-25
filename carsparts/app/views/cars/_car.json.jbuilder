@@ -1,2 +1,2 @@
-json.extract! car, :id, :make, :country, :model, :year, :make_num, :integer, :created_at, :updated_at
+json.extract! car, :id, :vin 
 json.url car_url(car, format: :json)

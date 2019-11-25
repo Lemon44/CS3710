@@ -1,35 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-
 <nav class="navbar navbar-light bg-light" style= "background-color: #e3f2fd;">
-  <a class="navbar-brand" href="/">Our Logo</a>
   <form class="form-inline">
-    <a class="btn btn-outline-primary" href="/cars" role="button">
-    Cars
-    </a>
-    <div style="padding-left: 10px;">
-      <a class="btn btn-outline-success" href="/makes" role="button">
-      Makes
-      </a>
-    </div>
+  <a class="btn btn-outline-success" href="/makes" role="button">Makes</a>
+  <a class="btn btn-outline-success" href="/cars" role="button">Cars</a>
   </form>
 </nav>
 
+<h1>Parts</h1>
 
-
-<h2>Search Parts by Name:</h2>
+<h2 style="color:white;"> Search Parts by Name: </h2>
 <%= form_tag(search_parts_url, method: "get") do %>
     <%= label_tag(:search, "Search for:") %>
     <%= text_field_tag(:search) %>
     <%= submit_tag("Search") %>
 <% end %>
 
-<h1>Parts</h1>
-
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th style="color:white;">Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>

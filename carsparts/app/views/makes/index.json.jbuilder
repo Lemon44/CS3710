@@ -1,1 +1,1 @@
-json.array! @makes, partial: "makes/make", as: :make
+json.array! @make, partial: "makes/make", as: :make

@@ -10,6 +10,7 @@ class PartsController < ApplicationController
   # GET /parts/1
   # GET /parts/1.json
   def show
+    @parts = Part.all
   end
 
   def search
@@ -25,7 +26,7 @@ class PartsController < ApplicationController
 
   # GET /parts/1/edit
   def edit
-    @part = Part.all
+    @parts = Part.all
     @cars = Car.all
   end
 
