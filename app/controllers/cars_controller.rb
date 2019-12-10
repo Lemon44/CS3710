@@ -1,4 +1,6 @@
 class CarsController < ApplicationController
+   before_action :authenticate_user!
+
     before_action :set_car, only: [:show, :edit, :update, :destroy]
   
     # GET /cars
@@ -6,10 +8,16 @@ class CarsController < ApplicationController
     def index
       @cars = Car.all
     end
+
+    def search
+      @cars = Car.where("vin like ?", "%#{params[:search]}%")
+      render :index
+    end 
   
     # GET /cars/1
     # GET /cars/1.json
     def show
+      @make = Make.all
     end
   
     # GET /cars/new
@@ -71,11 +79,6 @@ class CarsController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def car_params
-        params.require(:car).permit(:vin, :name, :model, :make_id, :part_ids => [])
+        params.require(:car).permit(:id, :vin, :part_id, :make_ids => [])
       end
-
-      def search
-        @car = Car.where("vin like ?", "%#{params[:query]}%")
-        render :index
-      end
-  end
+    end

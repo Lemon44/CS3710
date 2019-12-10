@@ -10,10 +10,13 @@ class PartsController < ApplicationController
   # GET /parts/1
   # GET /parts/1.json
   def show
+    @parts = Part.all
   end
 
-  def search  
-  end
+  def search
+    @cars = Part.where("name like ?", "%#{params[:search]}%")
+    render :index
+  end 
 
   # GET /parts/new
   def new
@@ -23,6 +26,7 @@ class PartsController < ApplicationController
 
   # GET /parts/1/edit
   def edit
+    @parts = Part.all
     @cars = Car.all
   end
 
