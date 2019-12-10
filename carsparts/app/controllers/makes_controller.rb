@@ -4,19 +4,17 @@ class MakesController < ApplicationController
   # GET /makes
   # GET /makes.json
   def index
-    @make = Make.all
+    @makes = Make.all
   end
 
   # GET /makes/1
   # GET /makes/1.json
   def show
-    @make = Make.all
   end
 
   # GET /makes/new
   def new
     @make = Make.new
-   # @cars = Car.all
   end
 
   # GET /makes/1/edit

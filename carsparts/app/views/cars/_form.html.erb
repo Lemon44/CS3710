@@ -28,8 +28,8 @@
 
   
   <div class="field">
-    <%= form.label :part_id %>
-    <%= form.collection_radio_buttons(:part_id, Part.all, :id, :name) %>
+    <%= form.label :part_ids %>
+    <%= form.collection_radio_buttons(:part_ids, Part.all, :id, :name) %>
   </div>
 
   <div class="actions">

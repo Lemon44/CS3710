@@ -54333,3 +54333,618 @@ Processing by PartsController#index as JSON
 Completed 200 OK in 99ms (Views: 88.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/cars" for ::1 at 2019-11-27 09:18:57 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CarsController#index as HTML
+Completed 401 Unauthorized in 87ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-27 09:18:58 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (487.2ms)
+Completed 200 OK in 3950ms (Views: 3883.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-27 09:19:13 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.0ms)
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 382ms (Views: 348.5ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/users" for ::1 at 2019-11-27 09:19:29 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x+ubn9mqksuOja6xM+GkJlLmttLKmX/ojwWjEt1wF+4rTC+CzmjpYGTeRBZaxCUc91pW59BYwEJuI3FaZhfAZA==", "user"=>{"email"=>"n@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "n@123.com"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "n@123.com"], ["encrypted_password", "$2a$11$001otcbZqrq7jTgr5Of.q.VG4WxbSuhopuXDjSNdKm6YlWg1gcXgm"], ["created_at", "2019-11-27 14:19:29.943946"], ["updated_at", "2019-11-27 14:19:29.943946"]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (29.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 639ms (ActiveRecord: 34.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-27 09:19:30 -0500
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 593ms (Views: 272.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&search=12345&commit=Search" for ::1 at 2019-11-27 09:19:48 -0500
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"12345", "commit"=>"Search"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (vin like '%12345%')[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 244ms (Views: 231.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cars/2" for ::1 at 2019-11-27 09:19:57 -0500
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:77
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (1.6ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  Rendered cars/show.html.erb within layouts/application (587.4ms)
+Completed 500 Internal Server Error in 769ms (ActiveRecord: 9.6ms)
+
+
+  
+ActionView::Template::Error (Could not find the association :cars_parts in model Car):
+    22: 
+    23: <p>
+    24:   <strong>Part:</strong>
+    25:   <% @car.parts.each do |part| %>
+    26:     <li><%= part.name %></li>
+    27:   <% end %>
+    28: </p>
+  
+app/views/cars/show.html.erb:25:in `_app_views_cars_show_html_erb__116685302_71383740'
+Started GET "/cars" for ::1 at 2019-11-27 09:20:06 -0500
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 273ms (Views: 246.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parts" for ::1 at 2019-11-27 09:20:07 -0500
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 417ms (Views: 310.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/makes" for ::1 at 2019-11-27 09:20:18 -0500
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__992956036_107957780'
+Started GET "/cars.json" for ::1 at 2019-11-27 09:20:35 -0500
+Processing by CarsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.json.jbuilder:1
+  Rendered cars/_car.json.jbuilder (1.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.6ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/index.json.jbuilder (93.5ms)
+Completed 200 OK in 161ms (Views: 127.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/makes.json" for ::1 at 2019-11-27 09:20:37 -0500
+Processing by MakesController#index as JSON
+  Rendering makes/index.json.jbuilder
+  [1m[36mMake Load (0.9ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.json.jbuilder:1
+  Rendered makes/_make.json.jbuilder (1.6ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/index.json.jbuilder (71.3ms)
+Completed 200 OK in 129ms (Views: 106.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts.json" for ::1 at 2019-11-27 09:20:39 -0500
+Processing by PartsController#index as JSON
+  Rendering parts/index.json.jbuilder
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.json.jbuilder:1
+  Rendered parts/_part.json.jbuilder (1.9ms)
+  Rendered parts/_part.json.jbuilder (0.8ms)
+  Rendered parts/_part.json.jbuilder (0.8ms)
+  Rendered parts/_part.json.jbuilder (0.9ms)
+  Rendered parts/_part.json.jbuilder (0.8ms)
+  Rendered parts/index.json.jbuilder (81.9ms)
+Completed 200 OK in 147ms (Views: 121.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/makes.json" for ::1 at 2019-11-27 09:20:41 -0500
+Processing by MakesController#index as JSON
+  Rendering makes/index.json.jbuilder
+  [1m[36mMake Load (0.7ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.json.jbuilder:1
+  Rendered makes/_make.json.jbuilder (1.7ms)
+  Rendered makes/_make.json.jbuilder (0.7ms)
+  Rendered makes/_make.json.jbuilder (0.7ms)
+  Rendered makes/_make.json.jbuilder (0.7ms)
+  Rendered makes/_make.json.jbuilder (0.7ms)
+  Rendered makes/_make.json.jbuilder (0.8ms)
+  Rendered makes/index.json.jbuilder (74.2ms)
+Completed 200 OK in 119ms (Views: 108.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars.json" for ::1 at 2019-11-27 09:20:42 -0500
+Processing by CarsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.json.jbuilder:1
+  Rendered cars/_car.json.jbuilder (1.3ms)
+  Rendered cars/_car.json.jbuilder (0.6ms)
+  Rendered cars/_car.json.jbuilder (0.6ms)
+  Rendered cars/_car.json.jbuilder (0.6ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/_car.json.jbuilder (0.5ms)
+  Rendered cars/index.json.jbuilder (81.4ms)
+Completed 200 OK in 136ms (Views: 117.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/makes.json" for ::1 at 2019-11-27 09:20:43 -0500
+Processing by MakesController#index as JSON
+  Rendering makes/index.json.jbuilder
+  [1m[36mMake Load (0.7ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.json.jbuilder:1
+  Rendered makes/_make.json.jbuilder (1.6ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/_make.json.jbuilder (0.7ms)
+  Rendered makes/_make.json.jbuilder (0.8ms)
+  Rendered makes/_make.json.jbuilder (0.7ms)
+  Rendered makes/_make.json.jbuilder (0.6ms)
+  Rendered makes/index.json.jbuilder (64.3ms)
+Completed 200 OK in 111ms (Views: 100.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts.json" for ::1 at 2019-11-27 09:20:44 -0500
+Processing by PartsController#index as JSON
+  Rendering parts/index.json.jbuilder
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.json.jbuilder:1
+  Rendered parts/_part.json.jbuilder (1.5ms)
+  Rendered parts/_part.json.jbuilder (0.7ms)
+  Rendered parts/_part.json.jbuilder (0.8ms)
+  Rendered parts/_part.json.jbuilder (0.8ms)
+  Rendered parts/_part.json.jbuilder (0.8ms)
+  Rendered parts/index.json.jbuilder (62.5ms)
+Completed 200 OK in 109ms (Views: 97.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:02:47 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CarsController#index as HTML
+Completed 401 Unauthorized in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-12-10 13:02:48 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (367.4ms)
+Started GET "/cars" for ::1 at 2019-12-10 13:02:51 -0700
+Processing by CarsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-12-10 13:02:51 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 974ms (Views: 955.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3774ms (Views: 3716.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-12-10 13:02:55 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jbo8tYqbXLtf4VTkXRcMTWDcWfFxIuHKJhd05HrX1Su3ZYMachHSces+PtNz4TEWriJJ+IWKVMxdpJhA37DbRw==", "user"=>{"email"=>"nbeck4@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nbeck4@msudenver.edu"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 81ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jbo8tYqbXLtf4VTkXRcMTWDcWfFxIuHKJhd05HrX1Su3ZYMachHSces+PtNz4TEWriJJ+IWKVMxdpJhA37DbRw==", "user"=>{"email"=>"nbeck4@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 851ms (Views: 342.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-12-10 13:03:16 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JSCGudBcZtesYDRYWbmkVnBOKyAgPvxu8Hmw1sVZKPGSz21H8v/Uepu6uZPkNvKlz8opXQoTvfAcgpn/nJqzw==", "user"=>{"email"=>"nb@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nb@msudenver.edu"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JSCGudBcZtesYDRYWbmkVnBOKyAgPvxu8Hmw1sVZKPGSz21H8v/Uepu6uZPkNvKlz8opXQoTvfAcgpn/nJqzw==", "user"=>{"email"=>"nb@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 673ms (Views: 237.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-12-10 13:03:25 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5yNdQDNCKiyqk2Xa0k11vmtrnUmQM1eYILa6oIvq1LLd/OLvy8ik5h5MD+38u0jlpZWNQGSb4p5bBVYELo3a3g==", "user"=>{"email"=>"nb@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nb@msudenver.edu"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5yNdQDNCKiyqk2Xa0k11vmtrnUmQM1eYILa6oIvq1LLd/OLvy8ik5h5MD+38u0jlpZWNQGSb4p5bBVYELo3a3g==", "user"=>{"email"=>"nb@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 716ms (Views: 291.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-12-10 13:03:35 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KZIjVN2RtzDwSbXAz8tWAfSwWbWhfAYTZZH5zKIT+TYTTZz7JRs5+kSW3/fhPWtaOk5JvFXUsxUeIhVoB3T3Wg==", "user"=>{"email"=>"nbicole@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nbicole@msudenver.edu"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KZIjVN2RtzDwSbXAz8tWAfSwWbWhfAYTZZH5zKIT+TYTTZz7JRs5+kSW3/fhPWtaOk5JvFXUsxUeIhVoB3T3Wg==", "user"=>{"email"=>"nbicole@msudenver.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 727ms (Views: 267.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-12-10 13:03:37 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.5ms)
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 365ms (Views: 362.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-12-10 13:03:52 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BciysU5VRIwR2p/UMRT3ZAVbLuLV9m78StsG+yfBHWZVa4feT9x+QTGSyLTmiIqxWijSsiJDmau9YJ5olys1Zg==", "user"=>{"email"=>"nb@msudenver.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nb@msudenver.edu"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (6.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "nb@msudenver.edu"], ["encrypted_password", "$2a$11$aOwNLPpg5ZA0JJIpLZr9OO9.rCHnzFiclz3s7U2agry80Ri0rUMYC"], ["created_at", "2019-12-10 20:03:53.227182"], ["updated_at", "2019-12-10 20:03:53.227182"]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (26.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 564ms (ActiveRecord: 33.7ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:03:53 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 512ms (Views: 240.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&search=12345&commit=Search" for ::1 at 2019-12-10 13:04:00 -0700
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"12345", "commit"=>"Search"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (vin like '%12345%')[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 227ms (Views: 214.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cars/2" for ::1 at 2019-12-10 13:04:06 -0700
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:77
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (0.9ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  Rendered cars/show.html.erb within layouts/application (489.0ms)
+Completed 500 Internal Server Error in 603ms (ActiveRecord: 6.6ms)
+
+
+  
+ActionView::Template::Error (Could not find the association :cars_parts in model Car):
+    22: 
+    23: <p>
+    24:   <strong>Part:</strong>
+    25:   <% @car.parts.each do |part| %>
+    26:     <li><%= part.name %></li>
+    27:   <% end %>
+    28: </p>
+  
+app/views/cars/show.html.erb:25:in `_app_views_cars_show_html_erb__778619893_73327180'
+Started GET "/cars" for ::1 at 2019-12-10 13:04:31 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 274ms (Views: 250.0ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/cars/10" for ::1 at 2019-12-10 13:04:36 -0700
+Processing by CarsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0lhwhLfFjEjxMaVPyXJU0yfXR52+H8e8Wm9tts3t383oh88rT08CgkXuz3jnhGmI6SlXlEq3croh3IESaIrRoQ==", "id"=>"10"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:77
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cars_controller.rb:67
+  [1m[36mCar Destroy (6.0ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/cars_controller.rb:67
+  [1m[35m (29.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cars_controller.rb:67
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 81ms (ActiveRecord: 37.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:04:37 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 293ms (Views: 270.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cars/2/edit" for ::1 at 2019-12-10 13:04:41 -0700
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:77
+  Rendering cars/edit.html.erb within layouts/application
+  [1m[36mMake Load (1.0ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:16
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:21
+  [1m[36mPart Load (1.0ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/cars/_form.html.erb:32
+  Rendered cars/_form.html.erb (392.4ms)
+  Rendered cars/edit.html.erb within layouts/application (467.3ms)
+Completed 500 Internal Server Error in 563ms (ActiveRecord: 6.5ms)
+
+
+  
+ActionView::Template::Error (Could not find the association :cars_parts in model Car):
+    29:   
+    30:   <div class="field">
+    31:     <%= form.label :part_ids %>
+    32:     <%= form.collection_radio_buttons(:part_ids, Part.all, :id, :name) %>
+    33:   </div>
+    34: 
+    35:   <div class="actions">
+  
+app/views/cars/_form.html.erb:32:in `block in _app_views_cars__form_html_erb__87011101_108603180'
+app/views/cars/_form.html.erb:1:in `_app_views_cars__form_html_erb__87011101_108603180'
+app/views/cars/edit.html.erb:3:in `_app_views_cars_edit_html_erb__968144127_108285560'
+Started GET "/cars" for ::1 at 2019-12-10 13:07:48 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 350ms (Views: 265.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/cars/2" for ::1 at 2019-12-10 13:07:51 -0700
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:77
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (0.9ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  Rendered cars/show.html.erb within layouts/application (53.1ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (Could not find the association :cars_parts in model Car):
+    22: 
+    23: <p>
+    24:   <strong>Part:</strong>
+    25:   <% @car.parts.each do |part| %>
+    26:     <li><%= part.name %></li>
+    27:   <% end %>
+    28: </p>
+  
+app/views/cars/show.html.erb:25:in `_app_views_cars_show_html_erb__778619893_122709880'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/parts" for ::1 at 2019-12-10 13:12:04 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 1291ms (Views: 1149.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:12:10 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 316ms (Views: 208.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/parts" for ::1 at 2019-12-10 13:12:13 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 234ms (Views: 221.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:12:15 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__963540620_119496040'
+Started GET "/makes" for ::1 at 2019-12-10 13:16:26 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__963540620_110703740'
+Started GET "/makes" for ::1 at 2019-12-10 13:16:31 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__963540620_121075300'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/makes" for ::1 at 2019-12-10 13:18:04 -0700

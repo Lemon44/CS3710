@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-   before_action :authenticate_user!
+    before_action :authenticate_user!
 
     before_action :set_car, only: [:show, :edit, :update, :destroy]
   
@@ -7,6 +7,7 @@ class CarsController < ApplicationController
     # GET /cars.json
     def index
       @cars = Car.all
+      @parts = Part.all
     end
 
     def search
@@ -17,7 +18,7 @@ class CarsController < ApplicationController
     # GET /cars/1
     # GET /cars/1.json
     def show
-      @make = Make.all
+      @parts = Part.all
     end
   
     # GET /cars/new
@@ -79,6 +80,6 @@ class CarsController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def car_params
-        params.require(:car).permit(:id, :vin, :part_id, :make_ids => [])
+        params.require(:car).permit(:make_id, :vin, :part_ids => [])
       end
     end
