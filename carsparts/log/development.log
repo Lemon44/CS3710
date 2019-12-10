@@ -54948,3 +54948,820 @@ app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__963540620
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
 Started GET "/makes" for ::1 at 2019-12-10 13:18:04 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (33.4ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__560902925_97823600'
+Started GET "/makes" for ::1 at 2019-12-10 13:18:11 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__560902925_98681960'
+Started GET "/make" for ::1 at 2019-12-10 13:18:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/make"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makes" for ::1 at 2019-12-10 13:18:18 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__560902925_64190200'
+Started GET "/cars" for ::1 at 2019-12-10 13:21:54 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 1239ms (Views: 1066.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/cars/2" for ::1 at 2019-12-10 13:21:58 -0700
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:78
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (0.8ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  Rendered cars/show.html.erb within layouts/application (249.1ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Car::CarPart):
+    22: 
+    23: <p>
+    24:   <strong>Part:</strong>
+    25:   <% @car.parts.each do |part| %>
+    26:     <li><%= part.name %></li>
+    27:   <% end %>
+    28: </p>
+  
+app/views/cars/show.html.erb:25:in `_app_views_cars_show_html_erb__914721032_112473820'
+Started GET "/cars" for ::1 at 2019-12-10 13:26:29 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 388ms (Views: 245.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/cars/3" for ::1 at 2019-12-10 13:26:32 -0700
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:78
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (1.3ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  Rendered cars/show.html.erb within layouts/application (84.1ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Car::CarsPart):
+    22: 
+    23: <p>
+    24:   <strong>Part:</strong>
+    25:   <% @car.parts.each do |part| %>
+    26:     <li><%= part.name %></li>
+    27:   <% end %>
+    28: </p>
+  
+app/views/cars/show.html.erb:25:in `_app_views_cars_show_html_erb__914721032_113605120'
+Started POST "/__web_console/repl_sessions/f50a953bb5423bfa83491371bb638de1/trace" for ::1 at 2019-12-10 13:26:46 -0700
+Started GET "/cars" for ::1 at 2019-12-10 13:37:04 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 310ms (Views: 222.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/cars/2" for ::1 at 2019-12-10 13:37:06 -0700
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:78
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (0.9ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mPart Load (1.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/show.html.erb:25
+  Rendered cars/show.html.erb within layouts/application (236.4ms)
+Completed 200 OK in 496ms (Views: 451.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:37:09 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 220ms (Views: 197.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars/6" for ::1 at 2019-12-10 13:37:11 -0700
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:78
+  Rendering cars/show.html.erb within layouts/application
+  [1m[36mMake Load (0.6ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/show.html.erb:25
+  Rendered cars/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 277ms (Views: 246.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:37:13 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 217ms (Views: 198.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:37:16 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  Rendered makes/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @makes.each do |make| %>
+    19:       <tr>
+    20:         <td><%= make.name %></td>
+    21:         <td><%= make.country %></td>
+  
+app/views/makes/index.html.erb:18:in `_app_views_makes_index_html_erb__560902925_107658980'
+Started GET "/makes" for ::1 at 2019-12-10 13:39:38 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.9ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 240ms (Views: 209.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/makes/1" for ::1 at 2019-12-10 13:39:42 -0700
+Processing by MakesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMake Load (0.8ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/makes_controller.rb:67
+  Rendering makes/show.html.erb within layouts/application
+  Rendered makes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 277ms (Views: 234.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:39:44 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.6ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 219ms (Views: 208.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/makes/3" for ::1 at 2019-12-10 13:39:45 -0700
+Processing by MakesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMake Load (0.6ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/makes_controller.rb:67
+  Rendering makes/show.html.erb within layouts/application
+  Rendered makes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 241ms (Views: 222.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:39:46 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.6ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 234ms (Views: 224.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/makes/5" for ::1 at 2019-12-10 13:39:47 -0700
+Processing by MakesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMake Load (0.7ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/makes_controller.rb:67
+  Rendering makes/show.html.erb within layouts/application
+  Rendered makes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 225ms (Views: 206.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:39:49 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.6ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 212ms (Views: 201.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parts" for ::1 at 2019-12-10 13:39:52 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 295ms (Views: 256.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/parts/3" for ::1 at 2019-12-10 13:39:55 -0700
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPart Load (1.0ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/parts_controller.rb:76
+  Rendering parts/show.html.erb within layouts/application
+  Rendered parts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 220ms (Views: 197.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parts" for ::1 at 2019-12-10 13:39:57 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.6ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 230ms (Views: 219.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:39:59 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.7ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ utime_failed - C:/Users/nicol/OneDrive/Documents/CS Projects/CS3710/carsparts/tmp/cache/assets/sprockets/v3.0/mA/mAIga202BXVFLaMhj2TMbWHfihGhrYGQknQ5PYuIzpE.cache):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <p class="alert"><%= alert %></p>
+    12: 
+  
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__749311231_120054940'
+Started GET "/parts" for ::1 at 2019-12-10 13:40:17 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 230ms (Views: 218.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:40:19 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 340ms (Views: 258.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/parts" for ::1 at 2019-12-10 13:43:52 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 253ms (Views: 238.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:43:55 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.8ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 280ms (Views: 268.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parts" for ::1 at 2019-12-10 13:44:00 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 290ms (Views: 278.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 13:44:03 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 328ms (Views: 303.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&search=12345&commit=Search" for ::1 at 2019-12-10 13:44:08 -0700
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"12345", "commit"=>"Search"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (vin like '%12345%')[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 241ms (Views: 226.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/parts" for ::1 at 2019-12-10 13:44:13 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 236ms (Views: 223.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=Clutch&commit=Search" for ::1 at 2019-12-10 13:44:19 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Clutch", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  Rendered parts/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25:   </thead>
+    26: 
+    27:   <tbody>
+    28:     <% @parts.each do |part| %>
+    29:       <tr>
+    30:         <td><%= part.name %></td>
+    31:         <td><%= link_to 'Show', part %></td>
+  
+app/views/parts/index.html.erb:28:in `_app_views_parts_index_html_erb__1011610307_120640740'
+app/controllers/parts_controller.rb:18:in `search'
+Started GET "/parts" for ::1 at 2019-12-10 13:47:42 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.0ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 295ms (Views: 260.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=Seat&commit=Search" for ::1 at 2019-12-10 13:47:47 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Seat", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  Rendered parts/index.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25:   </thead>
+    26: 
+    27:   <tbody>
+    28:     <% @parts.each do |part| %>
+    29:       <tr>
+    30:         <td><%= part.name %></td>
+    31:         <td><%= link_to 'Show', part %></td>
+  
+app/views/parts/index.html.erb:28:in `_app_views_parts_index_html_erb__1011610307_119249540'
+app/controllers/parts_controller.rb:18:in `search'
+Started GET "/parts" for ::1 at 2019-12-10 13:49:59 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  Rendered parts/index.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25:   </thead>
+    26: 
+    27:   <tbody>
+    28:     <% @part.each do |part| %>
+    29:       <tr>
+    30:         <td><%= part.name %></td>
+    31:         <td><%= link_to 'Show', part %></td>
+  
+app/views/parts/index.html.erb:28:in `_app_views_parts_index_html_erb__1011610307_96852620'
+Started GET "/parts" for ::1 at 2019-12-10 13:51:49 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.0ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 279ms (Views: 244.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=Tire&commit=Search" for ::1 at 2019-12-10 13:51:54 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Tire", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  Rendered parts/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25:   </thead>
+    26: 
+    27:   <tbody>
+    28:     <% @parts.each do |part| %>
+    29:       <tr>
+    30:         <td><%= part.name %></td>
+    31:         <td><%= link_to 'Show', part %></td>
+  
+app/views/parts/index.html.erb:28:in `_app_views_parts_index_html_erb__1011610307_125602080'
+app/controllers/parts_controller.rb:17:in `search'
+Started GET "/parts" for ::1 at 2019-12-10 13:52:58 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.0ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 266ms (Views: 234.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=Tire&commit=Search" for ::1 at 2019-12-10 13:53:04 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Tire", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts" WHERE (name like '%Tire%')[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 263ms (Views: 260.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=Tires&commit=Search" for ::1 at 2019-12-10 13:53:07 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Tires", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts" WHERE (name like '%Tires%')[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 221ms (Views: 219.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=Tire&commit=Search" for ::1 at 2019-12-10 13:53:11 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Tire", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" WHERE (name like '%Tire%')[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 227ms (Views: 224.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=%271+%3D+%271%27&commit=Search" for ::1 at 2019-12-10 13:53:20 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"'1 = '1'", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts" WHERE (name like '%''1 = ''1''%')[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 239ms (Views: 235.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=%271+OR+%271%3D%271&commit=Search" for ::1 at 2019-12-10 13:53:32 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"'1 OR '1='1", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts" WHERE (name like '%''1 OR ''1=''1%')[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 223ms (Views: 220.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parts/search?utf8=%E2%9C%93&search=+%27OR+1%3D1&commit=Search" for ::1 at 2019-12-10 13:54:00 -0700
+Processing by PartsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>" 'OR 1=1", "commit"=>"Search"}
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts" WHERE (name like '% ''OR 1=1%')[0m
+  ↳ app/views/parts/index.html.erb:28
+  Rendered parts/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 224ms (Views: 221.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 13:54:08 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.8ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 260ms (Views: 233.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/makes/new" for ::1 at 2019-12-10 13:54:10 -0700
+Processing by MakesController#new as HTML
+  Rendering makes/new.html.erb within layouts/application
+  Rendered makes/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for #<Make:0x000000000ecd4480>):
+    1: <h1>New Make</h1>
+    2: 
+    3: <%= render 'form', @make %>
+    4: 
+    5: <%= link_to 'Back', makes_path %>
+  
+app/views/makes/new.html.erb:3:in `_app_views_makes_new_html_erb__758725507_124188600'
+Started GET "/makes" for ::1 at 2019-12-10 13:54:33 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.8ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 260ms (Views: 248.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/makes/new" for ::1 at 2019-12-10 13:54:35 -0700
+Processing by MakesController#new as HTML
+  Rendering makes/new.html.erb within layouts/application
+  Rendered makes/new.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for #<Make:0x000000000ea302d8>):
+    1: <h1>New Make</h1>
+    2: 
+    3: <%= render 'form', @make %>
+    4: 
+    5: <%= link_to 'Back', makes_path %>
+  
+app/views/makes/new.html.erb:3:in `_app_views_makes_new_html_erb__758725507_122803740'
+Started GET "/makes" for ::1 at 2019-12-10 13:58:25 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (1.0ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 279ms (Views: 246.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/makes/new" for ::1 at 2019-12-10 13:58:27 -0700
+Processing by MakesController#new as HTML
+  Rendering makes/new.html.erb within layouts/application
+  Rendered makes/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for #<Make:0x000000000b918d80>):
+    1: <h1>New Make</h1>
+    2: 
+    3: <%= render 'form', @make %>
+    4: 
+    5: <%= link_to 'Back', makes_path %>
+  
+app/views/makes/new.html.erb:3:in `_app_views_makes_new_html_erb__758725507_97065760'
+Started GET "/makes" for ::1 at 2019-12-10 13:59:05 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.9ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 247ms (Views: 234.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/makes/new" for ::1 at 2019-12-10 13:59:08 -0700
+Processing by MakesController#new as HTML
+  Rendering makes/new.html.erb within layouts/application
+  Rendered makes/_form.html.erb (865.5ms)
+  Rendered makes/new.html.erb within layouts/application (880.5ms)
+Completed 500 Internal Server Error in 924ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `make' for #<#<Class:0x000000000e4c78f0>:0x000000000eca1a30>
+Did you mean?  @make):
+    1: <%= form_with(model: make, local: true) do |form| %>
+    2:   <% if @make.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@make.errors.count, "error") %> prohibited this make from being saved:</h2>
+  
+app/views/makes/_form.html.erb:1:in `_app_views_makes__form_html_erb__1029971778_124169520'
+app/views/makes/new.html.erb:3:in `_app_views_makes_new_html_erb__758725507_124064120'
+Started GET "/makes" for ::1 at 2019-12-10 14:00:44 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (1.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 326ms (Views: 297.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/makes/1" for ::1 at 2019-12-10 14:00:46 -0700
+Processing by MakesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMake Load (1.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/makes_controller.rb:67
+  Rendering makes/show.html.erb within layouts/application
+  Rendered makes/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ utime_failed - C:/Users/nicol/OneDrive/Documents/CS Projects/CS3710/carsparts/tmp/cache/assets/sprockets/v3.0/wE/wElYsxOGbatB9WjlvosDKGRDKd22sXF7C8CcpxnvF60.cache):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <p class="alert"><%= alert %></p>
+    12: 
+  
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__749311231_110617400'
+Started GET "/makes/1.json" for ::1 at 2019-12-10 14:01:13 -0700
+Processing by MakesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mMake Load (0.7ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/makes_controller.rb:67
+  Rendering makes/show.json.jbuilder
+  Rendered makes/_make.json.jbuilder (2.0ms)
+  Rendered makes/show.json.jbuilder (27.0ms)
+Completed 200 OK in 100ms (Views: 66.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/makes" for ::1 at 2019-12-10 14:01:37 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (1.2ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 301ms (Views: 266.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/makes/new" for ::1 at 2019-12-10 14:01:40 -0700
+Processing by MakesController#new as HTML
+  Rendering makes/new.html.erb within layouts/application
+  Rendered makes/new.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for #<Make:0x000000000e6e2040>):
+    1: <h1>New Make</h1>
+    2: 
+    3: <%= render 'form', @make %>
+    4: 
+    5: <%= link_to 'Back', makes_path %>
+  
+app/views/makes/new.html.erb:3:in `_app_views_makes_new_html_erb__758725507_121046640'
+Started GET "/makes" for ::1 at 2019-12-10 14:05:50 -0700
+Processing by MakesController#index as HTML
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (1.0ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/makes/index.html.erb:18
+  Rendered makes/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 286ms (Views: 252.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/cars" for ::1 at 2019-12-10 14:05:54 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:23
+  Rendered cars/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 447ms (Views: 320.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/cars/new" for ::1 at 2019-12-10 14:05:58 -0700
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mMake Load (0.7ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:16
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT "makes".* FROM "makes"[0m
+  ↳ app/views/cars/_form.html.erb:21
+  [1m[36mPart Load (0.9ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/cars/_form.html.erb:32
+  Rendered cars/_form.html.erb (401.7ms)
+  Rendered cars/new.html.erb within layouts/application (414.2ms)
+Completed 500 Internal Server Error in 504ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Car::CarPart):
+    29:   
+    30:   <div class="field">
+    31:     <%= form.label :part_ids %>
+    32:     <%= form.collection_radio_buttons(:part_ids, Part.all, :id, :name) %>
+    33:   </div>
+    34: 
+    35:   <div class="actions">
+  
+app/views/cars/_form.html.erb:32:in `block in _app_views_cars__form_html_erb__42961980_99104700'
+app/views/cars/_form.html.erb:1:in `_app_views_cars__form_html_erb__42961980_99104700'
+app/views/cars/new.html.erb:3:in `_app_views_cars_new_html_erb__179132645_100386920'
